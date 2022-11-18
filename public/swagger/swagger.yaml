@@ -1,0 +1,81 @@
+swagger: '2.0'
+info:
+  description: LPT APis
+  version: 1.0.0
+  title: LPT Frontend API's
+basePath: /api/
+tags:
+  - name: Category
+    description: Manage Category
+
+paths:
+  /login:
+    post:
+      tags:
+        - Auth
+      summary: Login Admin
+      description: 'Login supper Admin'
+      operationId: Login Admin
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: email
+          type: string
+          required: true
+        - in: query
+          name: password
+          type: string
+          required: false
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - api_key: []
+
+  /register:
+    post:
+      tags:
+        - Payment
+      summary: payment
+      description: 'payment Admin'
+      operationId: payment
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: name
+          type: string
+          required: true
+        - in: query
+          name: email
+          type: string
+          required: true
+        - in: query
+          name: password
+          type: string
+          required: true
+        - in: query
+          name: c_password
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Bad request
+      security:
+        - api_key: []
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: Authorization
+    in: header
+
+

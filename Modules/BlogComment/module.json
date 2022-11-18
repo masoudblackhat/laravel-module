@@ -1,0 +1,11 @@
+{
+    "name": "BlogComment",
+    "alias": "blogcomment",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BlogComment\\Providers\\BlogCommentServiceProvider"
+    ],
+    "files": []
+}
